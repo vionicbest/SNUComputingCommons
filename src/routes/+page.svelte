@@ -29,8 +29,8 @@
   </div>
   <div class='footer'>
     <div class='blocks'>
-      <button />
-      <button />
+      <img src='/images/button1.png' alt='download pdf' />
+      <img src='/images/button2.png' alt='donate' />
     </div>
     <div class='description'>
       <div class='child left' />
@@ -129,10 +129,11 @@
     align-items: center;
     height: 120px;
   }
-  .blocks > button {
-    width: 300px;
-    height: 50px;
+  .blocks > img {
     margin: 50px;
+  }
+  .blocks > img:hover {
+    opacity: 0.5
   }
   .description {
     height: 40px;
