@@ -1,4 +1,5 @@
 <script lang="ts">
+  export let Home;
 </script>
 
 <div class='page'>
@@ -29,8 +30,12 @@
   </div>
   <div class='footer'>
     <div class='blocks'>
-      <img src='/images/button1.png' alt='download pdf' />
-      <img src='/images/button2.png' alt='donate' />
+      <a href='/files/sample.pdf' download>
+        <img src='/images/button1.png' alt='download pdf' />
+      </a>
+      <a href='/donate'>
+        <img src='/images/button2.png' alt='donate' />
+      </a>
     </div>
     <div class='description'>
       <div class='child left' />
@@ -129,11 +134,12 @@
     align-items: center;
     height: 120px;
   }
-  .blocks > img {
+  .blocks > a > img {
     margin: 50px;
   }
-  .blocks > img:hover {
-    opacity: 0.5
+  .blocks > a > img:hover {
+    opacity: 0.5;
+    cursor: pointer;
   }
   .description {
     height: 40px;
