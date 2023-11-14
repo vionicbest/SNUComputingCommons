@@ -76,7 +76,7 @@
     width: 100%;
     height: 960px;
     flex-direction: column;
-    background-image: URL("images/image1.png");
+    background-image: URL("/images/image1.png");
   }
 
   .head {
