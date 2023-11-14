@@ -24,9 +24,33 @@ jobs:
 
       - name: 'Download deps'
         run: npm install
-
+      
       - name: Build
         run: npm run build --if-present
       
-      - name: run
-        run: npx serve public
+deploy:
+  runs-on: ubuntu-latest
+
+  needs: build
+
+  steps:
+  - name: Checkout Repository
+    uses: actions/checkout@v3
+
+  - name: Setup Node.js
+    uses: actions/setup-node@v3
+    with:
+      node-version: v20.9.0
+
+  - name: Install Serve
+    run: npm install -g serve
+
+  - name: Run Svelte App
+    run: serve public
+    background: true
+
+  - name: Wait for Deployment
+    run: sleep 10
+  
+  - name: Check Svelte App
+    run: curl -sSf http://localhost:3000 || exit 1
