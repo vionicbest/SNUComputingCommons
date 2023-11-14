@@ -47,7 +47,6 @@ jobs:
 
     - name: Run Svelte App
       run: serve public
-      background: true
 
     - name: Wait for Deployment
       run: sleep 10
