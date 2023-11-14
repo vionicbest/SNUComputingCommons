@@ -18,14 +18,12 @@
 
   function nextBackgroundImage() {
     currentImageIndex = (currentImageIndex + 1) % backgroundImageUrls.length;
-    console.log(currentImageIndex);
   }
   function prevBackgroundImage() {
     if (currentImageIndex - 1 <= 0) {
       currentImageIndex += 10;
     }
     currentImageIndex = (currentImageIndex - 1) % backgroundImageUrls.length;
-    console.log(currentImageIndex);
   }
 
 </script>
@@ -89,6 +87,17 @@
     transition: background-image 0.5s ease-in-out;
   }
 
+  .page::after{
+	/* 소스만 다운받고 화면은 나태내지 않는다. (숨김 처리) */
+    position:absolute; 
+    width:0; 
+    height:0; 
+    overflow:hidden; 
+    z-index:-1;
+    
+    /* load images */
+    content:url('/images/page1.png') url('/images/page2.png') url('/images/page3.png') url('/images/page4.png') url('/images/page5.png') url('/images/page6.png') url('/images/page7.png') url('/images/page8.png') url('/images/page9.png') url('/images/page10.png'); /* 필요한 이미지 소스들 다운 */
+}
   .main {
     display: flex;
     width: 100%;
