@@ -42,14 +42,8 @@ jobs:
       with:
         node-version: v20.9.0
 
-    - name: Install Serve
-      run: npm install -g serve
-
-    - name: Run Svelte App
-      run: serve public -l 3000
-
-    - name: Wait for Deployment
-      run: sleep 10
-    
-    - name: Check Svelte App
-      run: curl -sSf http://localhost:3000 || exit 1
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@3.7.1
+      with:
+        branch: gh-pages
+        folder: public
