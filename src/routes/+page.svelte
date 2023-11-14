@@ -59,7 +59,7 @@
     padding: 0;
     justify-content: center;
     flex-direction: column;
-    background-image: URL("{base}/images/image1.png");
+    background-image: URL("/images/image1.png");
   }
 
   .main {
@@ -130,7 +130,7 @@
   }
   .footer {
     height: 160px;
-    background-image: URL("{base}/images/lowerbar.png");
+    background-image: URL("/images/lowerbar.png");
   }
   .blocks {
     display: flex;
