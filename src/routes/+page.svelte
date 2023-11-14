@@ -1,8 +1,36 @@
 <script lang="ts">
   import { assets, base } from '$app/paths';
+
+  let currentImageIndex = 0;
+
+  const backgroundImageUrls = [
+    '/images/page1.png',
+    '/images/page2.png',
+    '/images/page3.png',
+    '/images/page4.png',
+    '/images/page5.png',
+    '/images/page6.png',
+    '/images/page7.png',
+    '/images/page8.png',
+    '/images/page9.png',
+    '/images/page10.png',
+  ]
+
+  function nextBackgroundImage() {
+    currentImageIndex = (currentImageIndex + 1) % backgroundImageUrls.length;
+    console.log(currentImageIndex);
+  }
+  function prevBackgroundImage() {
+    if (currentImageIndex - 1 <= 0) {
+      currentImageIndex += 10;
+    }
+    currentImageIndex = (currentImageIndex - 1) % backgroundImageUrls.length;
+    console.log(currentImageIndex);
+  }
+
 </script>
 
-<div class='page'>
+<div class='page' style="background-image: url('{backgroundImageUrls[currentImageIndex]}')">
   <div class='main'>
     <div class='head'>
       <div class='child logo'>
@@ -14,15 +42,14 @@
       <div class='child right'/>
     </div>
     <div class='body'>
-      <div class='child arrow left'>
+      <button class='child arrow left' on:click={prevBackgroundImage}>
         {"<"}
-      </div>
+      </button>
       <div class='child text'>
-        {"SNU COMPUTING COMMONS \n건축 기금을 모집합니다."}
       </div>
-      <div class='child arrow right'>
+      <button class='child arrow right' on:click={nextBackgroundImage}>
         {">"}
-      </div>
+      </button>
     </div>
     <div class="pbar">
       <img src='{base}/images/scroll.png' alt='scroll'/>
@@ -59,7 +86,7 @@
     padding: 0;
     justify-content: center;
     flex-direction: column;
-    background-image: URL("/images/image1.png");
+    transition: background-image 0.5s ease-in-out;
   }
 
   .main {
@@ -97,7 +124,10 @@
   .body .child {
     display: flex;
   }
-
+  .body > button {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+  }
   .arrow {
     justify-content: center;
     align-items: center;
