@@ -1,13 +1,14 @@
 <script lang="ts">
+  import { assets, base } from '$app/paths';
 </script>
 
 <div class='page'>
   <div class='head'>
     <div class='child logo'>
-      <img src='/images/SNUlogo.png' alt='snu logo' />
+      <img src='{base}/images/SNUlogo.png' alt='snu logo' />
     </div>
     <div class='child title'>
-      <img src='/images/computingcommonslogo.png' alt='cc logo' />
+      <img src='{base}/images/computingcommonslogo.png' alt='cc logo' />
     </div>
     <div class='child right'/>
   </div>
@@ -76,7 +77,7 @@
     width: 100%;
     height: 960px;
     flex-direction: column;
-    background-image: URL("/images/image1.png");
+    background-image: URL("{base}/images/image1.png");
   }
 
   .head {

@@ -1,14 +1,15 @@
 <script lang="ts">
+  import { assets, base } from '$app/paths';
 </script>
 
 <div class='page'>
   <div class='main'>
     <div class='head'>
       <div class='child logo'>
-        <img src='/images/SNUlogo.png' alt='snu logo' />
+        <img src='{base}/images/SNUlogo.png' alt='snu logo' />
       </div>
       <div class='child title'>
-        <img src='/images/computingcommonslogo.png' alt='cc logo' />
+        <img src='{base}/images/computingcommonslogo.png' alt='cc logo' />
       </div>
       <div class='child right'/>
     </div>
@@ -24,16 +25,16 @@
       </div>
     </div>
     <div class="pbar">
-      <img src='/images/scroll.png' alt='scroll'/>
+      <img src='{base}/images/scroll.png' alt='scroll'/>
     </div>
   </div>
   <div class='footer'>
     <div class='blocks'>
-      <a href='/files/sample.pdf' download>
-        <img src='/images/button1.png' alt='download pdf' />
+      <a href='{base}/files/sample.pdf' download>
+        <img src='{base}/images/button1.png' alt='download pdf' />
       </a>
-      <a href='/donate'>
-        <img src='/images/button2.png' alt='donate' />
+      <a href='{base}/donate'>
+        <img src='{base}/images/button2.png' alt='donate' />
       </a>
     </div>
     <div class='description'>
@@ -58,7 +59,7 @@
     padding: 0;
     justify-content: center;
     flex-direction: column;
-    background-image: URL("/images/image1.png");
+    background-image: URL("{base}/images/image1.png");
   }
 
   .main {
@@ -129,7 +130,7 @@
   }
   .footer {
     height: 160px;
-    background-image: URL("/images/lowerbar.png");
+    background-image: URL("{base}/images/lowerbar.png");
   }
   .blocks {
     display: flex;
