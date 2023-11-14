@@ -1,5 +1,4 @@
 <script lang="ts">
-  export let Home;
 </script>
 
 <div class='page'>
@@ -40,10 +39,10 @@
     <div class='description'>
       <div class='child left' />
       <div class='child snu'>
-
+        Computer Science Engineering, Seoul National University
       </div>
       <div class='child contact'>
-
+        문의 | (02) 886-7589 (서울대학교 컴퓨터공학부 행정실)
       </div>
     </div>
   </div>
@@ -106,6 +105,10 @@
     flex: 1;
   }
 
+  .arrow:hover {
+    cursor: pointer;
+  }
+
   .text {
     flex: 10;
     white-space: pre-wrap;
@@ -143,5 +146,25 @@
   }
   .description {
     height: 40px;
+    display: flex;
+    flex: 1;
+  }
+  .description .child {
+    flex: 1;
+  }
+  .snu {
+    display: flex;
+    justify-content: center;
+    font-family: 'Pretendard';
+    src: url("/fonts/Pretendard-Light.ttf");
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .contact {
+    display: flex;
+    justify-content: right;
+    font-family: 'Pretendard';
+    src: url("/fonts/Pretendard-Light.ttf");
+    padding: 0px 30px 0px 0px;
+    color: rgba(255, 255, 255, 0.5);
   }
 </style>
