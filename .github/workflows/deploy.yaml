@@ -41,6 +41,9 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: v20.9.0
+        
+    - name: 'Download deps'
+      run: npm install
 
     - name: Deploy to GitHub Pages
       run: npm run preview
