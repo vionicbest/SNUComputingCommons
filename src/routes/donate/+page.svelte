@@ -7,9 +7,9 @@
     <div class='child logo'>
       <img src='{base}/images/SNUlogo.png' alt='snu logo' />
     </div>
-    <div class='child title'>
+    <a href='{base}/' class='child title'>
       <img src='{base}/images/computingcommonslogo.png' alt='cc logo' />
-    </div>
+    </a>
     <div class='child right'/>
   </div>
   <div class='main'>
@@ -17,7 +17,11 @@
       <div class='center'>
         <div class='inputField'>
           <div class='child description'>
-            아래에 성함과 연락처를 남겨주시면 기부 방법에 대해 직접 연락드리겠습니다.
+            아래의 전화번호로 연락을 주시거나, 성함과 연락처를 입력해주시면 기부 관련한 상세한 안내를 해드리겠습니다.
+          </div>
+          <div class='child DonateContact'>
+            <div class='child cpn'>(02) 880-7288</div>
+            <div class='child cname'>서울대학교 컴퓨터공학부 Computing Commons 기금안내 담당 박지혜</div>
           </div>
           <div class='child fields'>
             <div class='in name'>
@@ -77,7 +81,7 @@
     width: 100%;
     height: 960px;
     flex-direction: column;
-    background-image: URL("/images/image1.png");
+    background-image: URL("/images/second_background.png");
   }
 
   .head {
@@ -113,8 +117,7 @@
   }
   .inputField {
     display: flex;
-    padding: 0px 160px 0px 160px;
-    width: 960px;
+    width: 1080px;
     height: 540px;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.5);
@@ -127,8 +130,28 @@
   .description {
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     flex: 2;
+  }
+  .DonateContact {
+    display: flex;
+    flex: 1;
+    background-color: white;
+  }
+  .DonateContact .child {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+  .cpn {
+    display: flex;
+    justify-content: right;
+    flex: 1;
+  }
+  .cname {
+    display: flex;
+    justify-content: left;
+    flex: 3;
   }
   .fields {
     flex: 3;

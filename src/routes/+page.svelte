@@ -34,19 +34,19 @@
       <div class='child logo'>
         <img src='{base}/images/SNUlogo.png' alt='snu logo' />
       </div>
-      <div class='child title'>
+      <a href='{base}/' class='child title'>
         <img src='{base}/images/computingcommonslogo.png' alt='cc logo' />
-      </div>
+      </a>
       <div class='child right'/>
     </div>
     <div class='body'>
       <button class='child arrow left' on:click={prevBackgroundImage}>
-        {"<"}
+        <img src='{base}/images/arrow_left.png' alt='larrow' />
       </button>
       <div class='child text'>
       </div>
       <button class='child arrow right' on:click={nextBackgroundImage}>
-        {">"}
+        <img src='{base}/images/arrow_right.png' alt='rarrow' />
       </button>
     </div>
     <div class="pbar">
@@ -88,7 +88,7 @@
   }
 
   .page::after{
-	/* 소스만 다운받고 화면은 나태내지 않는다. (숨김 처리) */
+	/* 소스만 다운받고 화면은 나타내지 않는다. (숨김 처리) */
     position:absolute; 
     width:0; 
     height:0; 
@@ -108,7 +108,7 @@
   .head {
     display: flex;
     height: 120px;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 1);
   }
   .head .child {
     flex: 1;
