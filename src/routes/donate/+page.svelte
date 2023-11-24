@@ -63,15 +63,22 @@
 </div>
 
 <style>
+  @font-face {
+    font-family: 'HakgyoansimBareonbatangB';
+    src: url("/fonts/HakgyoansimBareonbatangB.ttf") format("truetype");
+    font-style: normal;
+  }
+  
   .page {
     display: flex;
     width: 100%;
-    max-width: 1920px;
+    background-size: cover;
     height: 1080px;
     margin: auto;
     padding: 0;
     justify-content: center;
     flex-direction: column;
+    font-family: 'HakgyoansimBareonbatangB';
   }
 
   .main {
@@ -125,6 +132,7 @@
     flex: 5;
     justify-content: center;
     align-items: center;
+    font-size: 20px;
   }
   .contact {
     display: flex;
@@ -138,13 +146,14 @@
     color: black;
     justify-content: flex-end;
     align-items: center;
+    font-size: 16px;
     padding: 0px 10px 0px 0px;
   }
   .name {
     display: flex;
-    flex: 5;
+    flex: 6;
     color: black;
-    font-size: 13px;
+    font-size: 16px;
     align-items: center;
     padding: 0px 0px 0px 10px;
   }
@@ -175,6 +184,7 @@
   .label {
     display: flex;
     flex: 1;
+    font-size: 18px;
   }
   .field {
     display: flex;

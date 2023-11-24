@@ -55,7 +55,7 @@
   </div>
   <div class='footer'>
     <div class='blocks'>
-      <a href='{base}/files/sample.pdf' download>
+      <a href='{base}/files/SNU_computing Commons pamphlet_20231026_compressed.pdf' download>
         <img src='{base}/images/button1.png' alt='download pdf' />
       </a>
       <a href='{base}/donate'>
@@ -68,18 +68,24 @@
         Computer Science Engineering, Seoul National University
       </div>
       <div class='child contact'>
-        문의 | (02) 886-7589 (서울대학교 컴퓨터공학부 행정실)
+        문의 | (02) 880-7288 (서울대학교 컴퓨터공학부 행정실)
       </div>
     </div>
   </div>
 </div>
 
 <style>
+  @font-face {
+    font-family: 'Pretendard Light';
+    font-style: normal;
+    font-weight: 400;
+    src: url('%sveltekit.base%/fonts/Pretendard-Light.ttf') format('ttf');
+  }
   .page {
     display: flex;
     width: 100%;
-    max-width: 1920px;
     height: 1080px;
+    background-size: cover;
     margin: auto;
     padding: 0;
     justify-content: center;
