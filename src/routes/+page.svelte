@@ -80,11 +80,13 @@
     width: 100%;
     max-width: 1920px;
     height: 1080px;
-    margin: 0;
+    margin: auto;
     padding: 0;
     justify-content: center;
     flex-direction: column;
+    background-position: center;
     transition: background-image 0.5s ease-in-out;
+    background-color: rgba(0, 0, 0);
   }
 
   .page::after{
@@ -94,7 +96,6 @@
     height:0; 
     overflow:hidden; 
     z-index:-1;
-    
     /* load images */
     content:url('/images/page1.png') url('/images/page2.png') url('/images/page3.png') url('/images/page4.png') url('/images/page5.png') url('/images/page6.png') url('/images/page7.png') url('/images/page8.png') url('/images/page9.png') url('/images/page10.png'); /* 필요한 이미지 소스들 다운 */
 }
