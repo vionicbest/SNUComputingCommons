@@ -530,7 +530,7 @@
   
     .body {
       display: flex;
-      min-height: 490px;
+      min-height: calc(100vh - 180px);
       flex: 1;
     }
   
