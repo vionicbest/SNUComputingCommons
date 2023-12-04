@@ -1,5 +1,38 @@
 <script lang="ts">
   import { assets, base } from '$app/paths';
+  let name = '';
+  let pn = '';
+  let email = '';
+  let result = null;
+
+  function checkName() {
+    
+  }
+
+  function checkPhoneNumber() {
+
+  }
+
+  function checkEmail() {
+
+  }
+
+  async function donate () {
+    const res = await fetch('http://localhost:8000/update_sheet/', {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        pn: pn,
+      })
+    })
+    const json = await res.json()
+    result = JSON.stringify(json)
+    console.log(result)
+  }
 </script>
 
 <div class='page'>
@@ -34,23 +67,23 @@
                   <div class='label'>
                     성함
                   </div>
-                  <input class='field'/>
+                  <input class='field' bind:value={name}/>
                 </div>
                 <div class='in pnField'>
                   <div class='label'>
                     전화번호
                   </div>
-                  <input class='field' />
+                  <input class='field' bind:value={pn}/>
                 </div>
                 <div class='in emailField'>
                   <div class='label'>
                     이메일
                   </div>
-                  <input class='field' />
+                  <input class='field' bind:value={email}/>
                 </div>
               </div>
               <div class='sendButtonWrapper'>
-                <a href='/thanks'>
+                <a on:click={donate} href='/thanks'>
                   <img src='{base}/images/button2.png' alt='sendButton'/>
                 </a>
               </div>
