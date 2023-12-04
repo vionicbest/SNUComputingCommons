@@ -36,71 +36,18 @@
   }
 </script>
 
-<<<<<<< HEAD
-<div class='page'>
-  <div class='head'>
-    <div class='child logo'>
-      <img src='{base}/images/SNUlogo.png' alt='snu logo' />
-    </div>
-    <a href='{base}/' class='child title'>
-      <img src='{base}/images/computingcommonslogo.png' alt='cc logo' />
-    </a>
-    <div class='child right'/>
-  </div>
-  <div class='main'>
-    <div class='body'>
-      <div class='center'>
-        <div class='info'>
-          <div class='desc'>
-            아래의 전화번호로 연락을 주시거나, 성함과 연락처를 입력해주시면 기부 관련한 상세한 안내를 해드리겠습니다.
-          </div>
-          <div class='contact'>
-            <div class='pn'>
-              {"(02) 880-7288"}
-            </div>
-            <div class='name'>
-              서울대학교 컴퓨터공학부 Computing Commons 기금안내 담당 박지혜
-            </div>
-          </div>
-          <div class='inputFieldWrapper'>
-            <div class='inputField'>
-              <div class='inputContainer'>
-                <div class='in nameField'>
-                  <div class='label'>
-                    성함
-                  </div>
-                  <input class='field' bind:value={name}/>
-                </div>
-                <div class='in pnField'>
-                  <div class='label'>
-                    전화번호
-                  </div>
-                  <input class='field' bind:value={pn}/>
-                </div>
-                <div class='in emailField'>
-                  <div class='label'>
-                    이메일
-                  </div>
-                  <input class='field' bind:value={email}/>
-                </div>
-              </div>
-              <div class='sendButtonWrapper'>
-                <a on:click={donate} href='/thanks'>
-                  <img src='{base}/images/button2.png' alt='sendButton'/>
-                </a>
-=======
 <MediaQuery query="(min-width: 1281px)" let:matches>
 	{#if matches}
-    <div class='page'>
-      <div class='head'>
-        <div class='child logo'>
-          <img src='{base}/images/SNUlogo.png' alt='snu logo' />
-        </div>
-        <a href='{base}/' class='child title'>
-          <img src='{base}/images/computingcommonslogo.png' alt='cc logo' />
-        </a>
-        <div class='child right'/>
+  <div class='page'>
+    <div class='head'>
+      <div class='child logo'>
+        <img src='{base}/images/SNUlogo.png' alt='snu logo' />
       </div>
+      <a href='{base}/' class='child title'>
+        <img src='{base}/images/computingcommonslogo.png' alt='cc logo' />
+      </a>
+      <div class='child right'/>
+    </div>
       <div class='main'>
         <div class='body'>
           <div class='center'>
@@ -123,28 +70,27 @@
                       <div class='label'>
                         성함
                       </div>
-                      <input class='field'/>
+                      <input class='field' bind:value={name}/>
                     </div>
                     <div class='in pnField'>
                       <div class='label'>
                         전화번호
                       </div>
-                      <input class='field' />
+                      <input class='field' bind:value={pn}/>
                     </div>
                     <div class='in emailField'>
                       <div class='label'>
                         이메일
                       </div>
-                      <input class='field' />
+                      <input class='field' bind:value={email}/>
                     </div>
                   </div>
                   <div class='sendButtonWrapper'>
-                    <a href='/thanks'>
+                    <a on:click={donate} href='/thanks'>
                       <img src='{base}/images/button2.png' alt='sendButton'/>
                     </a>
                   </div>
                 </div>
->>>>>>> 282b96c2e75aefecc882c074f8af1542186363f3
               </div>
             </div>
           </div>
@@ -300,16 +246,16 @@
 
 <MediaQuery query="(min-width: 481px) and (max-width: 1280px)" let:matches>
 	{#if matches}
-    <div class='page'>
-      <div class='head'>
-        <div class='child logo'>
-          <img src='{base}/images/SNUlogo.png' alt='snu logo' />
-        </div>
-        <a href='{base}/' class='child title'>
-          <img src='{base}/images/computingcommonslogo.png' alt='cc logo' />
-        </a>
-        <div class='child right'/>
+  <div class='page'>
+    <div class='head'>
+      <div class='child logo'>
+        <img src='{base}/images/SNUlogo.png' alt='snu logo' />
       </div>
+      <a href='{base}/' class='child title'>
+        <img src='{base}/images/computingcommonslogo.png' alt='cc logo' />
+      </a>
+      <div class='child right'/>
+    </div>
       <div class='main'>
         <div class='body'>
           <div class='center'>
@@ -332,23 +278,23 @@
                       <div class='label'>
                         성함
                       </div>
-                      <input class='field'/>
+                      <input class='field' bind:value={name}/>
                     </div>
                     <div class='in pnField'>
                       <div class='label'>
                         전화번호
                       </div>
-                      <input class='field' />
+                      <input class='field' bind:value={pn}/>
                     </div>
                     <div class='in emailField'>
                       <div class='label'>
                         이메일
                       </div>
-                      <input class='field' />
+                      <input class='field' bind:value={email}/>
                     </div>
                   </div>
                   <div class='sendButtonWrapper'>
-                    <a href='/thanks'>
+                    <a on:click={donate} href='/thanks'>
                       <img src='{base}/images/button2.png' alt='sendButton'/>
                     </a>
                   </div>
