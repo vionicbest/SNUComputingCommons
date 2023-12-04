@@ -1,4 +1,5 @@
 module.exports = {
+<<<<<<< HEAD
   apps: [
     {
       name: 'sveltekit-app',
@@ -17,3 +18,14 @@ module.exports = {
     }
   ]
 };
+=======
+  apps : [{
+    name: 'my_app',
+    script: './build/index.js',
+    watch: '.',
+    instances: 1,
+    autorestart: true,
+  },
+]
+};
+>>>>>>> 282b96c2e75aefecc882c074f8af1542186363f3
