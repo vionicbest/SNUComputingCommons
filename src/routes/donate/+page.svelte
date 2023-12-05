@@ -19,7 +19,7 @@
   }
 
   async function donate () {
-    const res = await fetch('http://localhost:8000/update_sheet/', {
+    const res = await fetch('http://computingcommons.snu.ac.kr:8000/update_sheet/', {
       method: 'POST',
       headers: {
         "Content-Type": "application/json"
@@ -478,24 +478,24 @@
                       <div class='label'>
                         성함
                       </div>
-                      <input class='field'/>
+                      <input class='field' bind:value={name}/>
                     </div>
                     <div class='in pnField'>
                       <div class='label'>
                         전화번호
                       </div>
-                      <input class='field' />
+                      <input class='field' bind:value={pn}/>
                     </div>
                     <div class='in emailField'>
                       <div class='label'>
                         이메일
                       </div>
-                      <input class='field' />
+                      <input class='field' bind:value={email}/>
                     </div>
                   </div>
                   <div class='sendButtonWrapper'>
-                    <a href='/thanks'>
-                      <img src='{base}/images/p11_button.png' alt='sendButton'/>
+                    <a on:click={donate} href='/thanks'>
+                      <img src='{base}/images/button2.png' alt='sendButton'/>
                     </a>
                   </div>
                 </div>
