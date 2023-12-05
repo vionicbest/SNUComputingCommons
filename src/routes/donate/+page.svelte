@@ -19,7 +19,7 @@
   }
 
   async function donate () {
-    const res = await fetch('http://computingcommons.snu.ac.kr:8000/update_sheet/', {
+    const res = await fetch('http://localhost:8000/update_sheet/', {
       method: 'POST',
       headers: {
         "Content-Type": "application/json"
@@ -87,7 +87,7 @@
                   </div>
                   <div class='sendButtonWrapper'>
                     <a on:click={donate} href='/thanks'>
-                      <img src='{base}/images/button2.png' alt='sendButton'/>
+                      <img src='{base}/images/p11_button.png' alt='sendButton'/>
                     </a>
                   </div>
                 </div>
@@ -295,7 +295,7 @@
                   </div>
                   <div class='sendButtonWrapper'>
                     <a on:click={donate} href='/thanks'>
-                      <img src='{base}/images/button2.png' alt='sendButton'/>
+                      <img src='{base}/images/p11_button.png' alt='sendButton'/>
                     </a>
                   </div>
                 </div>
@@ -495,7 +495,7 @@
                   </div>
                   <div class='sendButtonWrapper'>
                     <a on:click={donate} href='/thanks'>
-                      <img src='{base}/images/button2.png' alt='sendButton'/>
+                      <img src='{base}/images/p11_button.png' alt='sendButton'/>
                     </a>
                   </div>
                 </div>
