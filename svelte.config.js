@@ -11,9 +11,7 @@ const config = {
 		csp : {
 			directives: {
 				'script-src' : ['self'],
-				'default-src' : ['self'],
 				'img-src' : ['self'],
-				'style-src' : ['self'],
 			},
 			mode: 'auto',
 		},
