@@ -13,6 +13,7 @@ const config = {
 				'script-src' : ['self'],
 				'default-src' : ['self'],
 				'img-src' : ['self'],
+				'style-src' : ['self'],
 			},
 			mode: 'auto',
 		},
