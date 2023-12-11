@@ -98,7 +98,7 @@
       </div>
     </div>
 
-    <style>
+    <style nonce="%sveltekit.nonce%">
       @font-face {
         font-family: 'HakgyoansimBareonbatangB';
         src: url("/fonts/HakgyoansimBareonbatangB.ttf") format("truetype");
@@ -306,7 +306,7 @@
       </div>
     </div>
 
-    <style>
+    <style nonce="%sveltekit.nonce%">
       @font-face {
         font-family: 'HakgyoansimBareonbatangB';
         src: url("/fonts/HakgyoansimBareonbatangB.ttf") format("truetype");
@@ -515,7 +515,7 @@
       </div>
     </div>
 
-    <style>
+    <style nonce="%sveltekit.nonce%">
       @font-face {
         font-family: 'HakgyoansimBareonbatangB';
         src: url("/fonts/HakgyoansimBareonbatangB.ttf") format("truetype");

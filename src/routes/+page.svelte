@@ -85,7 +85,7 @@
         </div>
       </div>
     </div>
-  </div><style>
+  </div><style nonce="%sveltekit.nonce%">
     @font-face {
       font-family: 'Pretendard Light';
       font-style: normal;
@@ -278,7 +278,7 @@
       </div>
     </div>
 	</div>
-  <style>
+  <style nonce="%sveltekit.nonce%">
     @font-face {
       font-family: 'Pretendard Light';
       font-style: normal;
@@ -467,7 +467,7 @@
     </div>
 	</div>
 
-  <style>
+  <style nonce="%sveltekit.nonce%">
     @font-face {
       font-family: 'Pretendard Light';
       font-style: normal;

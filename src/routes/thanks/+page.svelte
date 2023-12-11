@@ -44,7 +44,7 @@
       </div>
     </div>
 
-    <style>
+    <style nonce="%sveltekit.nonce%">
 
       @font-face {
         font-family: 'HakgyoansimBareonbatangB';
@@ -210,7 +210,7 @@
       </div>
     </div>
 
-    <style>
+    <style nonce="%sveltekit.nonce%">
 
       @font-face {
         font-family: 'HakgyoansimBareonbatangB';
@@ -372,7 +372,7 @@
       </div>
     </div>
 
-    <style>
+    <style nonce="%sveltekit.nonce%">
 
       @font-face {
         font-family: 'HakgyoansimBareonbatangB';
