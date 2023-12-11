@@ -1,4 +1,4 @@
-<script lang="ts">
+<script lang="ts" nonce="%sveltekit.nonce%">
   import MediaQuery from '../mediaQuery.svelte';
   import { assets, base } from '$app/paths';
 

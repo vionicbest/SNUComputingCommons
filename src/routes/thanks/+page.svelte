@@ -1,7 +1,6 @@
-<script lang="ts">
+<script lang="ts" nonce="%sveltekit.nonce%">
   import MediaQuery from '../../mediaQuery.svelte';
   import { assets, base } from '$app/paths';
-    import { compile } from 'svelte/compiler';
 </script>
 <MediaQuery query="(min-width: 1281px)" let:matches>
   {#if matches}
