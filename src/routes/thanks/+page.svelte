@@ -363,7 +363,7 @@
                 {"(02) 880-7288"}
               </div>
               <div class='name'>
-                서울대학교 컴퓨터공학부 Computing Commons 기금안내 담당 박지혜
+                서울대학교 컴퓨터공학부 <br /> Computing Commons 기금안내 담당 박지혜
               </div>
               </div>
             </div>
@@ -450,7 +450,7 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        font-size: 17px;
+        font-size: 15px;
         line-height: 32px;
         background-image: URL('images/p12_background_logo.png');
         background-size: cover;
@@ -460,6 +460,8 @@
         flex-direction: column;
         width: 300px;
         height: 100px;
+        text-align: center;
+        gap: 10px;
       }
       .lineWrapper {
         display: flex;
@@ -483,23 +485,22 @@
         display: flex;
         flex-direction: column;
         flex: 2;
-        align-items: flex-start;
         font-size: 13px;
+        gap: 10px;
       }
       .pn {
         display: flex;
         color: black;
-        justify-content: flex-end;
-        align-items: center;
-        font-size: 17px;
-        padding: 0px 10px 0px 0px;
+        justify-content: center;
+        font-size: 16px;
       }
       .name {
         display: flex;
         color: black;
-        font-size: 16px;
+        font-size: 12px;
+        justify-content: center;
         align-items: center;
-        padding: 0px 0px 0px 10px;
+        gap: 10px;
       }
     </style>
   {/if}

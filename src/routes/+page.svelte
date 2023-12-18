@@ -477,12 +477,8 @@
         </a>
       </div>
       <div class='description'>
-        <div class='child left' />
         <div class='child snu'>
           Computer Science Engineering, Seoul National University
-        </div>
-        <div class='child contact'>
-          문의 | (02) 880-7288 (서울대학교 컴퓨터공학부 행정실)
         </div>
       </div>
     </div>
@@ -585,7 +581,7 @@
       justify-content: center;
     }
     .footer {
-      height: 105px;
+      height: 95px;
       background-image: URL("/images/lowerbar.png");
     }
     .blocks {
@@ -596,7 +592,7 @@
     .blocks > a > img {
       width: 120px;
       height: 35px;
-      margin: 27.5px;
+      margin: 20px 20px 10px 20px;
     }
     .blocks > a > img:hover {
       opacity: 0.5;
@@ -613,6 +609,8 @@
       display: flex;
       justify-content: center;
       font-family: 'Pretendard';
+      font-size: 8px;
+      margin: 5px;
       src: url("/fonts/Pretendard-Light.ttf");
       color: rgba(255, 255, 255, 0.5);
     }

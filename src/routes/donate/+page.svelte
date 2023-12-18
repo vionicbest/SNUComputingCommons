@@ -594,7 +594,7 @@
         justify-content: center;
         text-align: center;
         align-items: center;
-        font-size: 13px;
+        font-size: 12px;
       }
       .contact {
         display: flex;
