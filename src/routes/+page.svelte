@@ -16,6 +16,31 @@
     '/images/page9.png',
     '/images/page10.png',
   ]
+  const backgroundImageUrlsForTablet = [
+    '/images/p1.png',
+    '/images/p2.png',
+    '/images/p3.png',
+    '/images/p4.png',
+    '/images/p5.png',
+    '/images/p6.png',
+    '/images/p7.png',
+    '/images/p8.png',
+    '/images/p9.png',
+    '/images/p10.png',
+  ]
+  const backgroundTextUrlsForTablet = [
+    '/images/p1_text.png',
+    '/images/p2_text.png',
+    '/images/p3_text.png',
+    '/images/p4_text.png',
+    '/images/p5_text.png',
+    '/images/p6_text.png',
+    '/images/p7_text.png',
+    '/images/p8_text.png',
+    '/images/p9_text.png',
+    '/images/p10_text.png',
+
+  ]
   const backgroundImageUrlsForMobile = [
     '/images/p01.png',
     '/images/p02.png',
@@ -26,7 +51,7 @@
     '/images/p07.png',
     '/images/p08.png',
     '/images/p09.png',
-    '/images/p10.png',
+    '/images/p010.png',
   ]
   function nextBackgroundImage() {
     currentImageIndex = (currentImageIndex + 1) % backgroundImageUrls.length;
@@ -232,29 +257,27 @@
 <MediaQuery query="(min-width: 481px) and (max-width: 1280px)" let:matches>
 	{#if matches}
 	<div class="root tablet">
-    <div class='page' style="background-image: url('{backgroundImageUrls[currentImageIndex]}')">
+    <div class='page'>
       <div class='main'>
         <div class='head'>
           <div class='child logo'>
-            <img src='{base}/images/SNUlogo.png' alt='snu logo' />
+            <img src='{base}/images/logo_snu_1.png' alt='snu logo' />
           </div>
           <a href='{base}/' class='child title'>
             <img src='{base}/images/computingcommonslogo.png' alt='cc logo' />
           </a>
           <div class='child right'/>
         </div>
-        <div class='body'>
+        <div class='body' style="background-image: url('{backgroundImageUrlsForTablet[currentImageIndex]}')">
           <button class='child arrow left' on:click={prevBackgroundImage}>
             <img src='{base}/images/arrow_left.png' alt='larrow' />
           </button>
           <div class='child text'>
+            <img src='{base}{backgroundTextUrlsForTablet[currentImageIndex]}' alt='text' />
           </div>
           <button class='child arrow right' on:click={nextBackgroundImage}>
             <img src='{base}/images/arrow_right.png' alt='rarrow' />
           </button>
-        </div>
-        <div class="pbar">
-          <img src='{base}/images/scroll.png' alt='scroll'/>
         </div>
       </div>
       <div class='footer'>
@@ -267,12 +290,8 @@
           </a>
         </div>
         <div class='description'>
-          <div class='child left' />
           <div class='child snu'>
             Computer Science Engineering, Seoul National University
-          </div>
-          <div class='child contact'>
-            문의 | (02) 880-7288 (서울대학교 컴퓨터공학부 행정실)
           </div>
         </div>
       </div>
@@ -289,14 +308,10 @@
       display: flex;
       width: 100%;
       height: 1080px;
-      background-size: cover;
       margin: auto;
       padding: 0;
       justify-content: center;
       flex-direction: column;
-      background-position: center;
-      transition: background-image 0.5s ease-in-out;
-      background-color: rgba(0, 0, 0);
     }
   
     .page::after{
@@ -307,8 +322,7 @@
       overflow:hidden; 
       z-index:-1;
       /* load images */
-      content:url('/images/page1.png') url('/images/page2.png') url('/images/page3.png') url('/images/page4.png') url('/images/page5.png') url('/images/page6.png') url('/images/page7.png') url('/images/page8.png') url('/images/page9.png') url('/images/page10.png'); /* 필요한 이미지 소스들 다운 */
-  }
+      content:url('/images/p1.png') url('/images/p2.png') url('/images/p3.png') url('/images/p4.png') url('/images/p5.png') url('/images/p6.png') url('/images/p7.png') url('/images/p8.png') url('/images/p9.png') url('/images/p10.png') url('/images/p1_text.png') url('/images/p2_text.png') url('/images/p3_text.png') url('/images/p4_text.png') url('/images/p5_text.png') url('/images/p6_text.png') url('/images/p7_text.png') url('/images/p8_text.png') url('/images/p9_text.png') url('/images/p10_text.png');  }
     .main {
       display: flex;
       width: 100%;
@@ -339,10 +353,17 @@
       display: flex;
       height: 760px;
       flex: 1;
+      background-size: cover;
+      background-position: center;
+      transition: background-image 0.5s ease-in-out;
+      background-color: rgba(0, 0, 0);
     }
   
     .body .child {
       display: flex;
+    }
+    .body > div > img {
+      width: 600px;
     }
     .body > button {
       border: none;
@@ -424,7 +445,7 @@
 
 <MediaQuery query="(max-width: 480px)" let:matches>
 	{#if matches}
-  <div class='page' style="background-image: url('{backgroundImageUrlsForMobile[currentImageIndex]}')">
+  <div class='page'>
     <div class='main'>
       <div class='head'>
         <div class='child logo'>
@@ -435,7 +456,7 @@
         </a>
         <div class='child right'/>
       </div>
-      <div class='body'>
+      <div class='body' style="background-image: url('{backgroundImageUrlsForMobile[currentImageIndex]}')">
         <button class='child arrow left' on:click={prevBackgroundImage}>
           <img src='{base}/images/arrow_left_1.png' alt='larrow' />
         </button>
@@ -476,15 +497,7 @@
     }
     .page {
       display: flex;
-      width: 100%;
-      background-size: cover;
-      margin: auto;
-      padding: 0;
-      justify-content: center;
       flex-direction: column;
-      background-position: center;
-      transition: background-image 0.5s ease-in-out;
-      background-color: rgba(0, 0, 0);
     }
   
     .page::after{
@@ -495,7 +508,7 @@
       overflow:hidden; 
       z-index:-1;
       /* load images */
-      content:url('/images/page1.png') url('/images/page2.png') url('/images/page3.png') url('/images/page4.png') url('/images/page5.png') url('/images/page6.png') url('/images/page7.png') url('/images/page8.png') url('/images/page9.png') url('/images/page10.png'); /* 필요한 이미지 소스들 다운 */
+      content:url('/images/p01.png') url('/images/p02.png') url('/images/p03.png') url('/images/p04.png') url('/images/p05.png') url('/images/p06.png') url('/images/p07.png') url('/images/p08.png') url('/images/p09.png') url('/images/p010.png'); /* 필요한 이미지 소스들 다운 */
   }
     .main {
       display: flex;
@@ -532,6 +545,10 @@
       display: flex;
       min-height: calc(100vh - 180px);
       flex: 1;
+      background-size: cover;
+      background-position: center;
+      transition: background-image 0.5s ease-in-out;
+      background-color: rgba(0, 0, 0);
     }
   
     .body .child {
@@ -568,7 +585,7 @@
       justify-content: center;
     }
     .footer {
-      height: 95px;
+      height: 105px;
       background-image: URL("/images/lowerbar.png");
     }
     .blocks {
