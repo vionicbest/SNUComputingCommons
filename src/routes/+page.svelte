@@ -70,10 +70,10 @@
     <div class='main'>
       <div class='head'>
         <div class='child logo'>
-          <img src='{base}/images/SNUlogo.png' alt='snu logo' />
+          <img src='{base}/images/snu_logo_2.svg' alt='snu logo' />
         </div>
         <a href='{base}/' class='child title'>
-          <img src='{base}/images/computingcommonslogo.png' alt='cc logo' />
+          <img src='{base}/images/computingcommons_logo_2.svg' alt='cc logo' />
         </a>
         <div class='child right'/>
       </div>
@@ -103,7 +103,7 @@
       <div class='description'>
         <div class='child left' />
         <div class='child snu'>
-          Computer Science Engineering, Seoul National University
+          Computer Science and Engineering, Seoul National University
         </div>
         <div class='child contact'>
           문의 | (02) 880-7288 (서울대학교 컴퓨터공학부 행정실)
@@ -161,12 +161,21 @@
       padding: 20px;
       align-self: center;
     }
+
+    .logo > img {
+      width: 402px;
+      height: 73px;
+    }
+
     .title {
       display: flex;
       justify-content: center;
       align-items: center;
     }
-  
+    .title > img {
+      width: 335px;
+      height: 50px;
+    }
     .body {
       display: flex;
       height: 760px;
@@ -261,10 +270,10 @@
       <div class='main'>
         <div class='head'>
           <div class='child logo'>
-            <img src='{base}/images/logo_snu_1.png' alt='snu logo' />
+            <img src='{base}/images/snu_3.svg' alt='snu logo' />
           </div>
           <a href='{base}/' class='child title'>
-            <img src='{base}/images/computingcommonslogo.png' alt='cc logo' />
+            <img src='{base}/images/computingcommons_logo_2.svg' alt='cc logo' />
           </a>
           <div class='child right'/>
         </div>
@@ -291,7 +300,7 @@
         </div>
         <div class='description'>
           <div class='child snu'>
-            Computer Science Engineering, Seoul National University
+            Computer Science and Engineering, Seoul National University
           </div>
         </div>
       </div>
@@ -342,11 +351,21 @@
       display: flex;
       padding: 20px;
       align-self: center;
+    }    
+
+    .logo > img {
+      width: 50px;
+      height: 50px;
     }
+
     .title {
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+    .title > img {
+      width: 335px;
+      height: 50px;
     }
   
     .body {
@@ -478,7 +497,7 @@
       </div>
       <div class='description'>
         <div class='child snu'>
-          Computer Science Engineering, Seoul National University
+          Computer Science and Engineering, Seoul National University
         </div>
       </div>
     </div>
