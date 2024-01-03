@@ -7,10 +7,10 @@
     <div class='page'>
       <div class='head'>
         <div class='child logo'>
-          <img src='{base}/images/SNUlogo.png' alt='snu logo' />
+          <img src='{base}/images/snu_logo_2.svg' alt='snu logo' />
         </div>
         <a href='{base}/' class='child title'>
-          <img src='{base}/images/computingcommonslogo.png' alt='cc logo' />
+          <img src='{base}/images/computingcommons_logo_2.svg' alt='cc logo' />
         </a>
         <div class='child right'/>
       </div>
@@ -89,6 +89,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+      }
+      .title > img {
+        width: 335px;
+        height: 50px;
       }
 
       .body {
@@ -173,10 +177,10 @@
     <div class='page'>
       <div class='head'>
         <div class='child logo'>
-          <img src='{base}/images/SNUlogo.png' alt='snu logo' />
+          <img src='{base}/images/snu_3.svg' alt='snu logo' />
         </div>
         <a href='{base}/' class='child title'>
-          <img src='{base}/images/computingcommonslogo.png' alt='cc logo' />
+          <img src='{base}/images/computingcommons_logo_2.svg' alt='cc logo' />
         </a>
         <div class='child right'/>
       </div>
@@ -251,10 +255,20 @@
         padding: 20px;
         align-self: center;
       }
+
+      .logo > img {
+        width: 50px;
+        height: 50px;
+      }
+    
       .title {
         display: flex;
         justify-content: center;
         align-items: center;
+      }
+      .title > img {
+        width: 335px;
+        height: 50px;
       }
 
       .body {
