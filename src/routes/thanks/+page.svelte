@@ -85,6 +85,10 @@
         padding: 20px;
         align-self: center;
       }
+      .logo > img {
+        width: 402px;
+        height: 73px;
+      }
       .title {
         display: flex;
         justify-content: center;
