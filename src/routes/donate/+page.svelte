@@ -19,7 +19,7 @@
   }
 
   async function donate () {
-    const res = await fetch('http://computingcommons.snu.ac.kr:8000/update_sheet/', {
+    const res = await fetch('https://computingcommons.snu.ac.kr:8000/update_sheet/', {
       method: 'POST',
       headers: {
         "Content-Type": "application/json"
