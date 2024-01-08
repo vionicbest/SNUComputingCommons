@@ -94,10 +94,13 @@
     <div class='footer'>
       <div class='blocks'>
         <a href='{base}/files/SNU_computing Commons pamphlet_20231026_compressed.pdf' download>
-          <img src='{base}/images/button1.png' alt='download pdf' />
+          <img src='{base}/images/webbutton_1.png' alt='download pdf' />
+        </a>
+        <a href='{base}/files/cc-final-report-231016.pdf' download>
+          <img src='{base}/images/webbutton_2.png' alt='download pdf' />
         </a>
         <a href='{base}/donate'>
-          <img src='{base}/images/button2.png' alt='donate' />
+          <img src='{base}/images/webbutton_3.png' alt='donate' />
         </a>
       </div>
       <div class='description'>
@@ -292,10 +295,13 @@
       <div class='footer'>
         <div class='blocks'>
           <a href='{base}/files/SNU_computing Commons pamphlet_20231026_compressed.pdf' download>
-            <img src='{base}/images/button1.png' alt='download pdf' />
+            <img src='{base}/images/tabletbutton_1.png' alt='download pdf' />
+          </a>
+          <a href='{base}/files/cc-final-report-231016.pdf' download>
+            <img src='{base}/images/tabletbutton_2.png' alt='download pdf' />
           </a>
           <a href='{base}/donate'>
-            <img src='{base}/images/button2.png' alt='donate' />
+            <img src='{base}/images/tabletbutton_3.png' alt='donate' />
           </a>
         </div>
         <div class='description'>
@@ -429,7 +435,8 @@
       height: 120px;
     }
     .blocks > a > img {
-      margin: 50px;
+      margin: 30px;
+      height: 80px;
     }
     .blocks > a > img:hover {
       opacity: 0.5;
@@ -489,10 +496,13 @@
     <div class='footer'>
       <div class='blocks'>
         <a href='{base}/files/SNU_computing Commons pamphlet_20231026_compressed.pdf' download>
-          <img src='{base}/images/button1_1.png' alt='download pdf' />
+          <img src='{base}/images/mobilebutton_1.png' alt='download pdf' />
+        </a>
+        <a href='{base}/files/cc-final-report-231016.pdf' download>
+          <img src='{base}/images/mobilebutton_2.png' alt='download pdf' />
         </a>
         <a href='{base}/donate'>
-          <img src='{base}/images/button2_1.png' alt='donate' />
+          <img src='{base}/images/mobilebutton_3.png' alt='donate' />
         </a>
       </div>
       <div class='description'>
@@ -609,9 +619,8 @@
       align-items: center;
     }
     .blocks > a > img {
-      width: 120px;
-      height: 35px;
-      margin: 20px 20px 10px 20px;
+      height: 37px;
+      margin: 12px;
     }
     .blocks > a > img:hover {
       opacity: 0.5;
