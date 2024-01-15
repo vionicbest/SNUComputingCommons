@@ -1,24 +1,42 @@
 <script lang="ts" nonce="%sveltekit.nonce%">
   import MediaQuery from '../../mediaQuery.svelte';
   import { assets, base } from '$app/paths';
+  import { goto } from '$app/navigation';
   let name = '';
   let pn = '';
   let email = '';
   let result = null;
+  let email_regex = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+  let pn_regex = /^[0-9]{3}[-]+[0-9]{4}[-]+[0-9]{4}$/;
+  let isNameError = false;
+  let isPnError = false;
+  let isEmailError = false;
 
   function checkName() {
-    
+    if (name == '') {
+      isNameError = true;
+    } else {
+      isNameError = false;
+    }
   }
 
   function checkPhoneNumber() {
-
+    isPnError = !pn_regex.test(pn);
   }
 
   function checkEmail() {
-
+    isEmailError = !email_regex.test(email);
   }
 
   async function donate () {
+    checkName();
+    checkPhoneNumber();
+    checkEmail();
+    if (isNameError || isPnError || isEmailError) {
+      console.log('error');
+      return;
+    }
+    goto("/thanks");
     const res = await fetch('https://computingcommons.snu.ac.kr:8000/update_sheet/', {
       method: 'POST',
       headers: {
@@ -70,25 +88,34 @@
                       <div class='label'>
                         성함
                       </div>
-                      <input class='field' bind:value={name}/>
+                      <input class='field' bind:value={name} placeholder="홍길동"/>
                     </div>
+                    {#if isNameError}
+                    <div class='err pntext'>이름을 입력해 주세요.</div>
+                    {/if}
                     <div class='in pnField'>
                       <div class='label'>
                         전화번호
                       </div>
-                      <input class='field' bind:value={pn}/>
+                      <input class='field' bind:value={pn} placeholder="010-1234-5678"/>
                     </div>
+                    {#if isPnError}
+                    <div class='err pntext'>전화번호 양식이 올바르지 않습니다.</div>
+                    {/if}
                     <div class='in emailField'>
                       <div class='label'>
                         이메일
                       </div>
-                      <input class='field' bind:value={email}/>
+                      <input class='field' bind:value={email} placeholder="test@example.com"/>
                     </div>
+                    {#if isEmailError}
+                    <div class='err emailtext'>이메일 양식이 올바르지 않습니다.</div>
+                    {/if}
                   </div>
                   <div class='sendButtonWrapper'>
-                    <a on:click={donate} href='/thanks'>
+                    <button on:click={donate}>
                       <img src='{base}/images/p11_button.png' alt='sendButton'/>
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -218,12 +245,16 @@
         display:flex;
         flex-direction: column;
         flex:3;
-        padding: 10px 0px 10px 0px;
+        padding: 8px 0px 8px 0px;
       }
       .inputContainer .in {
         display:flex;
         flex:1;
         align-items:center;
+      }
+      .inputContainer .err {
+        color: #ec0000;
+        padding: 0 0 0 12.5%;
       }
       .label {
         display: flex;
@@ -244,9 +275,14 @@
         justify-content: center;
         align-items: center;
       }
-      .sendButtonWrapper > a > img:hover {
+      .sendButtonWrapper > button > img:hover {
         opacity: 0.5;
         cursor: pointer;
+      }
+      .sendButtonWrapper > button {
+        border: none;
+        background-color: transparent;
+        outline: none;
       }
     </style>
   {/if}
@@ -286,25 +322,34 @@
                       <div class='label'>
                         성함
                       </div>
-                      <input class='field' bind:value={name}/>
+                      <input class='field' bind:value={name} placeholder="홍길동"/>
                     </div>
+                    {#if isNameError}
+                    <div class='err pntext'>이름을 입력해 주세요.</div>
+                    {/if}
                     <div class='in pnField'>
                       <div class='label'>
                         전화번호
                       </div>
-                      <input class='field' bind:value={pn}/>
+                      <input class='field' bind:value={pn} placeholder="010-1234-5678"/>
                     </div>
+                    {#if isPnError}
+                    <div class='err pntext'>전화번호 양식이 올바르지 않습니다.</div>
+                    {/if}
                     <div class='in emailField'>
                       <div class='label'>
                         이메일
                       </div>
-                      <input class='field' bind:value={email}/>
+                      <input class='field' bind:value={email} placeholder="test@example.com"/>
                     </div>
+                    {#if isEmailError}
+                    <div class='err emailtext'>이메일 양식이 올바르지 않습니다.</div>
+                    {/if}
                   </div>
                   <div class='sendButtonWrapper'>
-                    <a on:click={donate} href='/thanks'>
+                    <button on:click={donate}>
                       <img src='{base}/images/p11_button.png' alt='sendButton'/>
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -436,12 +481,16 @@
         display:flex;
         flex-direction: column;
         flex:3;
-        padding: 10px 0px 10px 0px;
+        padding: 8px 0px 8px 0px;
       }
       .inputContainer .in {
         display:flex;
         flex:1;
         align-items:center;
+      }
+      .inputContainer .err {
+        color: #ec0000;
+        padding: 0 0 0 12.5%;
       }
       .label {
         display: flex;
@@ -462,9 +511,14 @@
         justify-content: center;
         align-items: center;
       }
-      .sendButtonWrapper > a > img:hover {
+      .sendButtonWrapper > button > img:hover {
         opacity: 0.5;
         cursor: pointer;
+      }
+      .sendButtonWrapper > button {
+        border: none;
+        background-color: transparent;
+        outline: none;
       }
     </style>
   {/if}
@@ -496,25 +550,34 @@
                       <div class='label'>
                         성함
                       </div>
-                      <input class='field' bind:value={name}/>
+                      <input class='field' bind:value={name} placeholder="홍길동"/>
+                      {#if isNameError}
+                      <div class='err pntext'>이름을 입력해 주세요.</div>
+                      {/if}
                     </div>
                     <div class='in pnField'>
                       <div class='label'>
                         전화번호
                       </div>
-                      <input class='field' bind:value={pn}/>
+                      <input class='field' bind:value={pn} placeholder="010-1234-5678"/>
+                      {#if isPnError}
+                      <div class='err pntext'>전화번호 양식이 올바르지 않습니다.</div>
+                      {/if}
                     </div>
                     <div class='in emailField'>
                       <div class='label'>
                         이메일
                       </div>
-                      <input class='field' bind:value={email}/>
+                      <input class='field' bind:value={email} placeholder="test@example.com"/>
+                      {#if isEmailError}
+                      <div class='err emailtext'>이메일 양식이 올바르지 않습니다.</div>
+                      {/if}
                     </div>
                   </div>
                   <div class='sendButtonWrapper'>
-                    <a on:click={donate} href='/thanks'>
+                    <button on:click={donate}>
                       <img src='{base}/images/p11_button.png' alt='sendButton'/>
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -660,6 +723,11 @@
         flex-direction: column;
         align-items:flex-start;
       }
+      .inputContainer .err {
+        color: #ec0000;
+        font-size: 12px;
+        padding: 5px 0px 0px 0px;
+      }
       .label {
         display: flex;
         flex: 1;
@@ -680,15 +748,20 @@
         flex:1;
         justify-content: center;
         align-items: center;
-        padding: 30px;
+        padding: 25px;
       }
-      .sendButtonWrapper > a > img {
+      .sendButtonWrapper > button > img {
         width: 120px;
         height: 30px;
       }
-      .sendButtonWrapper > a > img:hover {
+      .sendButtonWrapper > button > img:hover {
         opacity: 0.5;
         cursor: pointer;
+      }
+      .sendButtonWrapper > button {
+        border: none;
+        background-color: transparent;
+        outline: none;
       }
     </style>
   {/if}
